@@ -1,0 +1,21 @@
+server:
+  port: 8091
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/newtodo
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:01834543259}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
